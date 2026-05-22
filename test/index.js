@@ -15,7 +15,7 @@ describe('@trenskow/object-http-header-value', () => {
 	describe('decode', () => {
 
 		it('must come back with decoded array value.', () => {
-			expect(decode('First-Value=first, Second-Value=second; First-Value=second, Second-Value=first'))
+			expect(decode('First-Value=first; Second-Value=second, First-Value=second; Second-Value=first'))
 				.to.eql([{
 					firstValue: 'first',
 					secondValue: 'second'
@@ -26,7 +26,7 @@ describe('@trenskow/object-http-header-value', () => {
 		});
 
 		it('must come back with decoded object.', () => {
-			expect(decode('First-Value=first, Second-Value=second'))
+			expect(decode('First-Value=first; Second-Value=second'))
 				.to.eql({
 					firstValue: 'first',
 					secondValue: 'second'
@@ -60,14 +60,14 @@ describe('@trenskow/object-http-header-value', () => {
 			}, {
 				firstValue: 'second',
 				secondValue: 'first'
-			}])).to.equal('First-Value=first, Second-Value=second; First-Value=second, Second-Value=first');
+			}])).to.equal('First-Value=first; Second-Value=second, First-Value=second; Second-Value=first');
 		});
 
 		it('must come back with correctly encoded format for object.', () => {
 			expect(encode({
 				firstValue: 'first',
 				secondValue: 'second'
-			})).to.equal('First-Value=first, Second-Value=second');
+			})).to.equal('First-Value=first; Second-Value=second');
 		});
 
 		it ('must come back with correct encoding when options are different.', () => {
