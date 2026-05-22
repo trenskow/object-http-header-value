@@ -28,10 +28,11 @@
 		"chai": "^6.2.2",
 		"eslint": "^10.4.0",
 		"globals": "^17.6.0",
-		"mocha": "^11.7.5"
+		"mocha": "^11.7.6"
 	},
 	"dependencies": {
 		"@trenskow/caseit": "^1.4.24",
-		"@trenskow/merge": "^0.1.57"
+		"@trenskow/merge": "^0.1.57",
+		"keyd": "^2.1.59"
 	}
 }

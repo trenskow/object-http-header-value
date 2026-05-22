@@ -23,12 +23,13 @@ const value = decode(
 
 These options are supported.
 
-| Key                 |  Type   | Description                                                  |                     Default                      |    Support    |
-| ------------------- | :-----: | ------------------------------------------------------------ | :----------------------------------------------: | :-----------: |
-| `keyCasing`         | String  | A string that determines the way the keys are encoded (in string when encoding and object when decoding). Available casing is the same as [@trenskow/caseit](https://github.com/trenskow/caseit). | `http`  when encoding and `camel` when decoding. | Encode/Decode |
-| `deliminator.value` | String  | The deliminator used to separate key-value pairs in the HTTP header value. |                       `; `                       | Encode/Decode |
-| `deliminator.item`  | String  | The deliminator used to separate multiple objects if an array is provided. |                       `, `                       | Encode/Decode |
-| `autoWrap`          | Boolean | Wrap in array when decoding only one item.                   |                     `false`                      |    Decode     |
+| Key                 |  Type   | Description                                                  | Default |    Support    |
+| ------------------- | :-----: | ------------------------------------------------------------ | :-----: | :-----------: |
+| `keyCasing`         | String  | A string that determines the way the keys are encoded (in string when encoding and object when decoding). Available casing is the same as [@trenskow/caseit](https://github.com/trenskow/caseit). When no option is provided no key casing transform will be done. |         | Encode/Decode |
+| `deliminator.value` | String  | The deliminator used to separate key-value pairs in the HTTP header value. |  `; `   | Encode/Decode |
+| `deliminator.item`  | String  | The deliminator used to separate multiple objects if an array is provided. |  `, `   | Encode/Decode |
+| `deliminator.key`   | String  | The deliminator to use when dealing with nested objects.     |   `.`   | Encode/Decode |
+| `autoWrap`          | Boolean | Wrap in array when decoding only one item.                   | `false` |    Decode     |
 
 # License
 
