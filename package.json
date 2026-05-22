@@ -1,6 +1,6 @@
 {
 	"name": "@trenskow/object-http-header-value",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "A small library for encoding objects into HTTP headers.",
 	"keywords": [
 		"object",
