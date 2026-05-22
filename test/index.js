@@ -34,13 +34,14 @@ describe('@trenskow/object-http-header-value', () => {
 		});
 
 		it('must come back with a nested object and support casing.', () => {
-			expect(decode('This.Is.A=test; This.Is.Another=tester', {
+			expect(decode('This.Is.A=test; This.Is.Another=tester; This.Is.Unknown', {
 				keyCasing: 'camel'
 			})).to.eql({
 				this: {
 					is: {
 						a: 'test',
-						another: 'tester'
+						another: 'tester',
+						unknown: undefined
 					}
 				}
 			});
@@ -69,7 +70,8 @@ describe('@trenskow/object-http-header-value', () => {
 		it('must come back with correctly encoded format for array.', () => {
 			expect(encode([{
 				firstValue: 'first',
-				secondValue: 'second'
+				secondValue: 'second',
+				unknown: undefined
 			}, {
 				firstValue: 'second',
 				secondValue: 'first'
@@ -88,12 +90,14 @@ describe('@trenskow/object-http-header-value', () => {
 				this: {
 					is: {
 						a: 'test',
-						another: 'tester'
+						another: 'tester',
+						unknown: undefined
 					}
 				}
 			}, {
-				keyCasing: 'http'
-			})).to.equal('This.Is.A=test; This.Is.Another=tester');
+				keyCasing: 'http',
+				undefinedValues: 'keep'
+			})).to.equal('This.Is.A=test; This.Is.Another=tester; This.Is.Unknown');
 		});
 
 		it ('must come back with correct encoding when options are different.', () => {
