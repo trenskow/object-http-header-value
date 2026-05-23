@@ -27,9 +27,9 @@ These options are supported.
 | ------------------- | :-------------------: | ------------------------------------------------------------ | :-------: | :-----------: |
 | `keyCasing`         |        String         | A string that determines the way the keys are encoded (in string when encoding and object when decoding). Available casing is the same as [@trenskow/caseit](https://github.com/trenskow/caseit). When no option is provided no key casing transform will be done. |           | Encode/Decode |
 | `undefinedValues`   | `'keep'` or `'strip'` | Keep or strip keys which values are `undefined`.             | `'strip'` |    Encode     |
-| `deliminator.value` |        String         | The deliminator used to separate key-value pairs in the HTTP header value. |   `; `    | Encode/Decode |
-| `deliminator.item`  |        String         | The deliminator used to separate multiple objects if an array is provided. |   `, `    | Encode/Decode |
-| `deliminator.key`   |        String         | The deliminator to use when dealing with nested objects.     |    `.`    | Encode/Decode |
+| `delimiter.value` |        String         | The delimiter used to separate key-value pairs in the HTTP header value. |   `; `    | Encode/Decode |
+| `delimiter.item`  |        String         | The delimiter used to separate multiple objects if an array is provided. |   `, `    | Encode/Decode |
+| `delimiter.key`   |        String         | The delimiter to use when dealing with nested objects.     |    `.`    | Encode/Decode |
 | `autoWrap`          |        Boolean        | Wrap in array when decoding only one item.                   |  `false`  |    Decode     |
 
 # License

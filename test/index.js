@@ -50,7 +50,7 @@ describe('@trenskow/object-http-header-value', () => {
 		it('must come back with decoded array when options are different', () => {
 			expect(decode('first_value=first?second_value=second|first_value=second?second_value=first', {
 				keyCasing: 'snake',
-				deliminator: {
+				delimiter: {
 					value: '?',
 					item: '|'
 				}
@@ -109,7 +109,7 @@ describe('@trenskow/object-http-header-value', () => {
 				secondValue: 'first'
 			}], {
 				keyCasing: 'snake',
-				deliminator: {
+				delimiter: {
 					value: '?',
 					item: '|'
 				}
