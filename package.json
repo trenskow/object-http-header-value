@@ -31,8 +31,8 @@
 		"mocha": "^11.7.6"
 	},
 	"dependencies": {
-		"@trenskow/caseit": "^1.4.28",
+		"@trenskow/caseit": "^1.4.29",
 		"@trenskow/merge": "^0.1.63",
-		"keyd": "^2.1.71"
+		"keyd": "^2.1.72"
 	}
 }
