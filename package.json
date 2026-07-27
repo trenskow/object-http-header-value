@@ -26,13 +26,13 @@
 		"@eslint/eslintrc": "^3.3.6",
 		"@eslint/js": "^10.0.1",
 		"chai": "^6.2.2",
-		"eslint": "^10.7.0",
-		"globals": "^17.7.0",
+		"eslint": "^10.8.0",
+		"globals": "^17.8.0",
 		"mocha": "^11.7.6"
 	},
 	"dependencies": {
 		"@trenskow/caseit": "^1.4.28",
-		"@trenskow/merge": "^0.1.62",
-		"keyd": "^2.1.70"
+		"@trenskow/merge": "^0.1.63",
+		"keyd": "^2.1.71"
 	}
 }
