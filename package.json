@@ -33,6 +33,6 @@
 	"dependencies": {
 		"@trenskow/caseit": "^1.4.33",
 		"@trenskow/merge": "^0.1.69",
-		"keyd": "^2.1.81"
+		"keyd": "^2.1.82"
 	}
 }
